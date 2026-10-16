@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071a35">
+<meta name="description" content="ArreglaFácil: asesoramiento online para entender averías domésticas en toda España. Contacto directo por WhatsApp.">
+<title>ArreglaFácil | Tu casa, más fácil</title>
+<style>
+:root{--navy:#071a35;--blue:#1769ff;--cyan:#37d5f2;--ink:#17243a;--muted:#65748b;--bg:#f5f8fc;--white:#fff;--line:#e4eaf2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:850;letter-spacing:-.7px;color:var(--navy)}.brandmark{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;font-size:23px;box-shadow:0 8px 20px #1769ff30}
+.links{display:flex;gap:26px;color:#536178;font-size:.94rem}.links a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:13px;padding:13px 19px;background:var(--blue);color:#fff;font-weight:750;cursor:pointer;box-shadow:0 9px 20px #1769ff28;transition:.2s}.btn:hover{transform:translateY(-2px);background:#0757eb}.btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:none}
+.hero{background:radial-gradient(ellipse at 90% 15%,#1e80ff25,transparent 35%),linear-gradient(135deg,#f5f9ff 0%,#fff 65%);padding:78px 0 72px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#1258d7;background:#e8f1ff;border:1px solid #d8e7ff;border-radius:100px;padding:7px 12px;font-size:.83rem;font-weight:750}.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e20}
+h1{font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.04;letter-spacing:-2.8px;color:var(--navy);margin:22px 0}.grad{background:linear-gradient(90deg,var(--blue),#08a9d8);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:1.13rem;color:var(--muted);max-width:570px;margin:0 0 27px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.micro{font-size:.83rem;color:#718097;margin-top:18px}
+.visual{min-height:390px;position:relative;display:grid;place-items:center}.orb{width:min(390px,90%);aspect-ratio:1;border-radius:38% 62% 55% 45%/45% 42% 58% 55%;background:linear-gradient(145deg,#d9edff,#e9fbff 55%,#b7d5ff);position:relative;display:grid;place-items:center;transform:rotate(-4deg)}.house{width:64%;height:64%;border-radius:30px;background:#fff;box-shadow:0 24px 65px #0b3a7530;display:grid;place-items:center;transform:rotate(4deg);position:relative}.house svg{width:72%;height:72%}.float-card{position:absolute;background:#fff;padding:14px 17px;border:1px solid #e4edf8;border-radius:17px;box-shadow:0 15px 35px #183b6615;display:flex;align-items:center;gap:10px;font-size:.87rem;font-weight:750}.float-card small{display:block;color:var(--muted);font-weight:500}.fc1{top:18px;right:0}.fc2{bottom:32px;left:0}.mini-icon{width:39px;height:39px;border-radius:12px;background:#e8f2ff;color:var(--blue);display:grid;place-items:center;font-size:20px}
+.trust{border-block:1px solid var(--line);padding:19px 0}.trust-inner{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;color:#52637b;font-size:.91rem;font-weight:650}.trust span{display:flex;align-items:center;gap:8px}
+section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.kicker{text-transform:uppercase;letter-spacing:1.7px;font-size:.76rem;font-weight:850;color:var(--blue)}h2{font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.13;letter-spacing:-1.3px;color:var(--navy);margin:10px 0 13px}.section-head p{color:var(--muted);margin:0}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{border:1px solid var(--line);border-radius:20px;padding:23px;background:#fff;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:0 16px 38px #183b660d;border-color:#c7dcff}.service .mini-icon{width:48px;height:48px;font-size:24px;margin-bottom:17px}.service h3{margin:0 0 7px;color:var(--navy);font-size:1.08rem}.service p{margin:0;color:var(--muted);font-size:.92rem}
+.how{background:var(--bg)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px}.num{font-size:.82rem;font-weight:850;color:var(--blue);background:#eaf2ff;width:38px;height:38px;border-radius:12px;display:grid;place-items:center}.step h3{margin:17px 0 8px;color:var(--navy)}.step p{margin:0;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.contact-copy p{color:var(--muted)}.contact-points{display:grid;gap:13px;margin-top:25px}.contact-point{display:flex;gap:11px;align-items:center;font-weight:650}.contact-point span:first-child{width:35px;height:35px;border-radius:11px;background:#eaf2ff;display:grid;place-items:center}
+form{background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px #102b4d0b;border-radius:23px;padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}label{font-size:.88rem;font-weight:750;color:#34445d}input,select,textarea{width:100%;border:1px solid #d9e2ee;border-radius:11px;padding:12px 13px;font:inherit;color:var(--ink);background:#fbfdff}input:focus,select:focus,textarea:focus{outline:3px solid #1769ff20;border-color:var(--blue)}textarea{resize:vertical;min-height:120px}.privacy{font-size:.78rem;color:var(--muted);margin:12px 0 17px}.form-note{font-size:.84rem;color:var(--muted);margin-top:12px}
+.cta-band{background:linear-gradient(120deg,#071a35,#103c77);color:#fff;border-radius:26px;padding:37px 40px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-band h2{color:#fff;margin:0 0 7px;font-size:2rem}.cta-band p{margin:0;color:#cfdbef}
+footer{background:#06142a;color:#c0cde0;padding:35px 0;margin-top:72px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:850;font-size:1.1rem}.footer-small{font-size:.82rem;color:#8fa2bd}.safety{background:#fff8e8;border:1px solid #f7e4b8;border-radius:14px;padding:15px 17px;color:#72551b;font-size:.88rem;margin-top:24px}
+@media(max-width:850px){.links{display:none}.hero{padding:55px 0}.hero-grid{grid-template-columns:1fr;gap:15px}.visual{min-height:330px}.grid4{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.cta-band{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.wrap{width:min(100% - 28px,1120px)}.nav{height:66px}.nav>.btn{padding:10px 12px;font-size:.85rem}.brand{font-size:1.1rem}.brandmark{width:36px;height:36px}.hero{padding:45px 0 36px}h1{letter-spacing:-1.7px}.hero p{font-size:1rem}.visual{min-height:285px}.float-card{padding:10px 12px;font-size:.77rem}.fc1{right:-3px}.fc2{left:-3px}.trust-inner{gap:13px;justify-content:flex-start}.trust span{font-size:.8rem}section{padding:56px 0}.grid4{gap:10px}.service{padding:17px}.service h3{font-size:1rem}.service p{font-size:.85rem}.steps{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}form{padding:20px}.cta-band{padding:28px 23px}.cta-band h2{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio"><span class="brandmark">⚡</span> ArreglaFácil</a>
+<nav class="links" aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#como-funciona">Cómo funciona</a><a href="#contacto">Contacto</a></nav>
+<a class="btn" href="https://wa.me/34630694369?text=Hola%2C%20he%20visto%20ArreglaF%C3%A1cil%20y%20necesito%20ayuda%20con%20una%20aver%C3%ADa." target="_blank" rel="noopener">Hablar por WhatsApp ↗</a>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div>
+<div class="eyebrow"><span class="dot"></span> Asesoramiento práctico para tu hogar</div>
+<h1>¿Tienes una avería en casa?<br><span class="grad">Vamos a resolverla.</span></h1>
+<p>Cuéntanos qué ocurre y te ayudamos a entender el problema, comprobar lo básico y encontrar el siguiente paso, sin complicaciones.</p>
+<div class="hero-actions"><a class="btn" href="https://wa.me/34630694369?text=Hola%2C%20he%20visto%20ArreglaF%C3%A1cil%20y%20necesito%20ayuda%20con%20una%20aver%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp →</a><a class="btn secondary" href="#como-funciona">Cómo funciona</a></div>
+<div class="micro">Claro, cercano y paso a paso. Desde tu móvil.</div></div>
+<div class="visual"><div class="orb"><div class="house"><svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M28 102L110 32L192 102" stroke="#1769FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M49 94V183H171V94" stroke="#071A35" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><rect x="89" y="125" width="42" height="58" rx="5" fill="#DCEBFF" stroke="#1769FF" stroke-width="5"/><path d="M108 53L91 91H112L101 119L137 77H116L128 53H108Z" fill="#23BDEB" stroke="#1769FF" stroke-width="3" stroke-linejoin="round"/></svg></div></div><div class="float-card fc1"><span class="mini-icon">🛠️</span><span>Soluciones claras<small>Sin tecnicismos</small></span></div><div class="float-card fc2"><span class="mini-icon">✓</span><span>Un paso cada vez<small>A tu ritmo</small></span></div></div>
+</div></section>
+<div class="trust"><div class="wrap trust-inner"><span>✓ Explicaciones sencillas</span><span>⌂ Para problemas del hogar</span><span>↗ Orientación desde cualquier lugar</span></div></div>
+<section id="servicios"><div class="wrap"><div class="section-head"><div class="kicker">¿En qué te ayudamos?</div><h2>Tu problema, explicado de forma fácil</h2><p>Te orientamos para identificar posibles causas y saber qué comprobaciones tienen sentido según tu caso.</p></div>
+<div class="grid4">
+<article class="service"><div class="mini-icon">⚡</div><h3>Electricidad</h3><p>Luces que fallan, enchufes, interruptores y dudas sobre instalaciones.</p></article>
+<article class="service"><div class="mini-icon">💧</div><h3>Fontanería</h3><p>Goteos, grifos, cisternas y pequeñas incidencias de agua.</p></article>
+<article class="service"><div class="mini-icon">❄️</div><h3>Climatización</h3><p>Aire acondicionado, ventiladores y primeras comprobaciones de funcionamiento.</p></article>
+<article class="service"><div class="mini-icon">🔧</div><h3>Reparaciones</h3><p>Pequeños arreglos, montaje y orientación para tareas domésticas.</p></article>
+</div></div></section>
+<section class="how" id="como-funciona"><div class="wrap"><div class="section-head"><div class="kicker">Así de sencillo</div><h2>Tres pasos para empezar</h2><p>Sin perderte en explicaciones complicadas. Empezamos por entender qué está pasando.</p></div>
+<div class="steps"><article class="step"><div class="num">01</div><h3>Cuéntanos qué ocurre</h3><p>Describe el problema, cuándo empezó y qué has observado. Puedes preparar fotos para compartirlas por el canal de contacto que acordemos.</p></article><article class="step"><div class="num">02</div><h3>Revisamos la información</h3><p>Te ayudamos a ordenar los síntomas y a distinguir las comprobaciones sencillas de las que requieren un profesional.</p></article><article class="step"><div class="num">03</div><h3>Te orientamos</h3><p>Recibe una explicación clara de los siguientes pasos. Si hace falta una intervención presencial, te lo indicaremos.</p></article></div>
+<div class="safety"><strong>La seguridad es lo primero.</strong> No manipules cables, cuadros eléctricos, aparatos abiertos ni instalaciones con tensión. Ante olor a quemado, chispas, humo, fuga importante o riesgo inmediato, aléjate y contacta con los servicios profesionales o de emergencia adecuados.</div>
+</div></section>
+<section id="contacto"><div class="wrap contact-grid"><div class="contact-copy"><div class="kicker">Contacto</div><h2>Cuéntanos tu avería</h2><p>Cuéntanos directamente por WhatsApp qué ocurre. Puedes añadir fotos o vídeos del problema para ayudarnos a entenderlo.</p><div class="contact-points"><div class="contact-point"><span>📱</span><span>Contacto directo por WhatsApp</span></div><div class="contact-point"><span>💬</span><span>Envía descripción, fotos o vídeos</span></div><div class="contact-point"><span>🧭</span><span>Te ayudamos a saber por dónde empezar</span></div></div></div>
+<form id="repairForm">
+<div class="form-grid">
+<div class="field"><label for="name">Tu nombre</label><input id="name" name="name" placeholder="Cómo te llamas" required></div>
+<div class="field"><label for="area">Tipo de avería</label><select id="area" name="area" required><option value="">Selecciona una opción</option><option>Electricidad</option><option>Fontanería</option><option>Climatización</option><option>Electrodomésticos</option><option>Pequeña reparación</option><option>Otra consulta</option></select></div>
+<div class="field full"><label for="problem">¿Qué está pasando?</label><textarea id="problem" name="problem" placeholder="Describe los síntomas, cuándo empezó y qué has comprobado..." required></textarea></div>
+<div class="field full"><label for="location">Localidad (opcional)</label><input id="location" name="location" placeholder="Tu localidad"></div>
+</div>
+<p class="privacy">Al pulsar el botón se abrirá WhatsApp con el mensaje preparado. No se almacenan ni se envían tus datos desde esta página.</p>
+<button class="btn" type="submit">Continuar por WhatsApp →</button>
+<p class="form-note" id="formNote" role="status">El mensaje se abrirá en WhatsApp para que puedas revisarlo y enviarlo.</p>
+</form>
+</div></section>
+<section style="padding-top:0"><div class="wrap"><div class="cta-band"><div><h2>Tu casa, más fácil.</h2><p>Entiende la avería y encuentra el siguiente paso con ArreglaFácil.</p></div><a class="btn" href="https://wa.me/34630694369?text=Hola%2C%20he%20visto%20ArreglaF%C3%A1cil%20y%20necesito%20ayuda%20con%20una%20aver%C3%ADa." target="_blank" rel="noopener" style="background:#fff;color:#0b2c5a;box-shadow:none">Empezar consulta ↗</a></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="footer-brand">⚡ ArreglaFácil</div><div class="footer-small">Asesoramiento doméstico online en toda España · Contacto por WhatsApp.</div></div><div class="footer-small">© <span id="year"></span> ArreglaFácil · Todos los derechos reservados</div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('repairForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const d=new FormData(this);
+ const message='Hola, he visto ArreglaFácil y necesito ayuda con una avería.\n\nNombre: '+d.get('name')+'\nTipo de avería: '+d.get('area')+'\nLocalidad: '+(d.get('location')||'No indicada')+'\n\nDescripción:\n'+d.get('problem');
+ window.open('https://wa.me/34630694369?text='+encodeURIComponent(message),'_blank','noopener');
+});
+</script>
+</body></html>
